@@ -10,6 +10,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { QRCodeSVG } from 'qrcode.react'
+import { Chat } from '../app/types/chat';  // Adjust the import path as needed
+import Image from 'next/image';
 
 export function App() {
   const [functionality, setFunctionality] = useState("gesture-to-text")
@@ -26,7 +28,7 @@ export function App() {
   ])
   const [showSaveDialog, setShowSaveDialog] = useState(false)
   const [showShareDialog, setShowShareDialog] = useState(false)
-  const [selectedChat, setSelectedChat] = useState(null)
+  const [selectedChat, setSelectedChat] = useState<Chat | null>(null)
   const [dragActive, setDragActive] = useState(false)
   const [shareLink, setShareLink] = useState("")
 
@@ -93,7 +95,7 @@ export function App() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <img src="/placeholder.svg?height=32&width=32" alt="ISL to Txt Logo" className="w-8 h-8" />
+                  <Image src="/placeholder.svg" alt="ISL to Txt Logo" width={32} height={32} />
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
@@ -107,7 +109,7 @@ export function App() {
                         key={chat.id}
                         variant="ghost"
                         className="w-full justify-start mb-2 px-2 py-1 h-auto"
-                        onClick={() => setSelectedChat(chat)}
+                        onClick={() => setSelectedChat(chat as Chat | null)}
                       >
                         <div className="text-left">
                           <div className="font-semibold truncate">{chat.title}</div>
