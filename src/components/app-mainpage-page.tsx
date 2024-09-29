@@ -10,7 +10,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { QRCodeSVG } from 'qrcode.react'
-import { Chat, ShareLinkInfo, ChatType } from '../../types/chat'
+import { Chat, ShareLinkInfo, ChatType } from '../app/types/chat'
+import Image from 'next/image';
 
 export function Page() {
   const [functionality, setFunctionality] = useState<ChatType>("gesture-to-text")
@@ -94,7 +95,7 @@ export function Page() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <img src="/placeholder.svg?height=32&width=32" alt="ISL to Txt Logo" className="w-8 h-8" />
+                  <Image src="/placeholder.svg" alt="ISL to Txt Logo" width={32} height={32} />
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
