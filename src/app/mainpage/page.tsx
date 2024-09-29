@@ -13,7 +13,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import { Chat, ShareLinkInfo, ChatType } from '@/app/types/chat'
 import Image from 'next/image';
 
-export default function ISLToTxtApp() {
+export default function SignSyncApp() {
   const [functionality, setFunctionality] = useState<ChatType>("gesture-to-text")
   const [recognizedText, setRecognizedText] = useState("")
   const [inputText, setInputText] = useState("")
@@ -69,7 +69,7 @@ export default function ISLToTxtApp() {
 
   const generateShareLink = useCallback(() => {
     const randomString = Math.random().toString(36).substring(2, 15)
-    const newLink = `https://isl-to-txt.com/share/${randomString}`
+    const newLink = `https:.com/share/${randomString}`
     setShareLinkInfo({ link: newLink, qrCode: newLink })
   }, [])
 
@@ -95,7 +95,7 @@ export default function ISLToTxtApp() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Image src="/placeholder.svg" alt="ISL to Txt Logo" width={32} height={32} />
+                  <Image src="/logo.png" alt="Sign Sync Logo" width={32} height={32} />
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
@@ -133,7 +133,7 @@ export default function ISLToTxtApp() {
                 </div>
               </DialogContent>
             </Dialog>
-            <h1 className="text-xl font-bold">ISL to Txt</h1>
+            <h1 className="text-xl font-bold">Sign Sync</h1>
           </div>
           <div className="flex items-center space-x-4">
             <Select value={functionality} onValueChange={(value: ChatType) => setFunctionality(value)}>
@@ -321,7 +321,7 @@ export default function ISLToTxtApp() {
       {/* Footer */}
       <footer className="bg-muted mt-auto">
         <div className="container mx-auto px-4 py-4 text-center text-sm text-muted-foreground">
-          <p>&copy; 2023 ISL to Txt. All rights reserved.</p>
+          <p>&copy; 2023 Sign Sync. All rights reserved.</p>
           <p className="mt-2">
             <a href="#" className="underline">Documentation</a> | <a href="#" className="underline">Support</a>
           </p>

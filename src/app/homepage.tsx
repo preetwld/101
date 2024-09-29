@@ -22,7 +22,8 @@ export default function HomePage() {
     },
     {
       title: "Introducing Elastica",
-      description: "pata chal jaega"
+      description: "pata chal jaega",
+      cta: "Get started with Elastica"
     }
   ]
 
