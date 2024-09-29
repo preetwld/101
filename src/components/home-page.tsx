@@ -14,16 +14,16 @@ export function HomePageComponent() {
   const [visibleAchievements, setVisibleAchievements] = useState(0)
   const [attachedFile, setAttachedFile] = useState<File | null>(null)
 
-  const ads = [
+  const ads: Ad[] = [
     {
       title: "Introducing Sign-Sync",
-      description: "Revolutionize your document signing process with blockchain-powered security and efficiency.",
-      cta: "Get Started with Sign-Sync"
+      description: "NLP-powered, multi-language sign language platform offering continuous word-level translation, note-taking, and collaborative sessions for comprehensive ISL communication.",
+      cta: "Learn More" // Add this line
     },
     {
       title: "Introducing Elastica",
-      description: "Experience the future of scalable blockchain solutions with our cutting-edge elastic network.",
-      cta: "Get Started with Elastica"
+      description: "Pata chal jaega",
+      cta: "Your call-to-action text here"
     }
   ]
 
@@ -211,4 +211,10 @@ export function HomePageComponent() {
       </footer>
     </div>
   )
+}
+
+interface Ad {
+  title: string;
+  description: string;
+  cta: string; // Add this line
 }
