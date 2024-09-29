@@ -17,13 +17,12 @@ export default function HomePage() {
   const ads = [
     {
       title: "Introducing Sign-Sync",
-      description: "Revolutionize your document signing process with blockchain-powered security and efficiency.",
+      description: "NLP-powered, multi-language sign language platform offering continuous word-level translation, note-taking, and collaborative sessions for comprehensive ISL communication.",
       cta: "Get Started with Sign-Sync"
     },
     {
       title: "Introducing Elastica",
-      description: "Experience the future of scalable blockchain solutions with our cutting-edge elastic network.",
-      cta: "Get Started with Elastica"
+      description: "pata chal jaega"
     }
   ]
 

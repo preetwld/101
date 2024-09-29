@@ -17,7 +17,7 @@ export function HomePageComponent() {
   const ads: Ad[] = [
     {
       title: "Introducing Sign-Sync",
-      description: "NLP-powered, multi-language sign language platform offering continuous word-level translation, note-taking, and collaborative sessions for comprehensive ISL communication.",
+      description: "NLP-powered, multi-language sign language platform offering continuous word-level translation, note-taking, and collaborative sessions for comprehensive ISL communication.",
       cta: "Learn More" // Add this line
     },
     {
@@ -63,7 +63,7 @@ export function HomePageComponent() {
       clearInterval(adInterval)
       clearInterval(achievementInterval)
     }
-  }, [])
+  }, [achievements.length, ads.length])
 
   const handleFileAttachment = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null
